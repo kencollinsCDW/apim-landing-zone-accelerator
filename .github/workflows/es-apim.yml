@@ -53,7 +53,10 @@ jobs:
       - name: Write deployment information to log
         run: |
           echo "Deploying to ${{ fromJson(env.config).AZURE_LOCATION }} with name prefix ${{ fromJson(env.config).RESOURCE_NAME_PREFIX }} and environment tag ${{ fromJson(env.config).ENVIRONMENT_TAG }}"
-        
+          echo "client-id: ${{ secrets.AZURE_OIDC_CLIENT_ID }}"
+          echo "tenant-id: ${{ secrets.AZURE_TENANT_ID }}"
+          echo "subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}"
+
         # Log into Azure via OIDC
       - uses: azure/login@v1
         with:

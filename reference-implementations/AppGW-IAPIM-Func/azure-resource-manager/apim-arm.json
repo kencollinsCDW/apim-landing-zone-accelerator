@@ -2474,7 +2474,7 @@
                     },
                     "accountName": {
                       "type": "string",
-                      "defaultValue": "",
+                      "defaultValue": "https://github.com/kencollinsCDW/apim-landing-zone-accelerator",
                       "metadata": {
                         "description": "The Azure DevOps or GitHub account name"
                       }
